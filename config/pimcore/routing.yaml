@@ -1,0 +1,9 @@
+shurija_helper_route_admin:
+    resource: "@ShurijaHelperBundle/src/Controller/Admin/*"
+    type: annotation
+    prefix: /admin/shurija/helper
+
+shurija_helper_route:
+    resource: "@ShurijaHelperBundle/src/Controller/*"
+    type: annotation
+    prefix: /shurija/helper
