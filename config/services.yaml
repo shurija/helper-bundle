@@ -16,6 +16,13 @@ services:
         public: true
         tags: ['controller.service_arguments']
 
+    Shurija\HelperBundle\Model\:
+        resource: '../src/Model/*'
+
+    Shurija\HelperBundle\EventListener\Asset\AdminImagePreviewListener:
+        tags:
+            - { name: kernel.event_listener, event: pimcore.admin.resolve.elementAdminStyle, method: onResolveElementAdminStyle }
+
 # add more services, or override services that need manual wiring
 #    Shurija\HelperBundle\ExampleClass:
 #        arguments:
